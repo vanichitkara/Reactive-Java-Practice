@@ -5,6 +5,7 @@ import reactor.core.publisher.Flux;
 
 public class Lec04FluxCreateIssueFix {
     public static void main(String[] args) {
+        //only one instance of flux sink is shared with multiple threads
         Flux.create(fluxSink -> {
             String country;
             do{
